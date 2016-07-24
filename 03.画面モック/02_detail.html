@@ -7,13 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>面談アプリ</title>
 	<link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./resource/css/interview-app-common.css" rel="stylesheet">
 	<link href="./resource/css/hidden-radio.css" rel="stylesheet">
-	<style rel="stylesheet">
-		body {
-			margin-top: 70px;
-			margin-bottom: 60px;
-		}
-	</style>
 	<script type="text/javascript">
 	function disp(){
 		// 「OK」時の処理開始 ＋ 確認ダイアログの表示
@@ -46,7 +41,7 @@
             </button>
 
 				<!-- タイトルなどのテキスト -->
-				<a class="navbar-brand" href="#">面談アプリ</a>
+				<a class="navbar-brand" >面談アプリ</a>
 
 			</div>
 
@@ -58,9 +53,10 @@
 
 					<!-- 通常のリンク -->
 					<li class="active"><a href="01_list.html">ビジネス基礎チェック表</a></li>
-					<li><a href="#">コーチング表</a></li>
 				</ul>
-				<p class="navbar-text navbar-right">ようこそ <a href="#" class="navbar-link">長沼 佑</a> さん</p>
+
+				<!-- ログイン機能は未実装 -->
+				<!--<p class="navbar-text navbar-right">ようこそ <a href="#" class="navbar-link">長沼 佑</a> さん</p>-->
 
 			</div>
 		</div>
@@ -78,6 +74,7 @@
 			<!-- 中分類 -->
 			<div class="col-md-3">
 				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#checkBaseInfo" class="list-group-item linkInThePage">実施者/実施日</a></li>
 					<li><a href="#group1" class="list-group-item linkInThePage">基本</a></li>
 					<li><a href="#group2" class="list-group-item linkInThePage">指示/報連相</a></li>
 					<li><a href="#group3" class="list-group-item linkInThePage">コミュニケーション</a></li>
@@ -88,6 +85,24 @@
 
 			<!-- チェックリスト -->
 			<div class="col-md-9">
+				<!-- 実施者/実施日 -->
+				<div class="panel panel-primary">
+					<div class="panel-heading" id="checkBaseInfo">実施者/実施日</div>
+					<div class="panel-body form-inline">
+						<div class="input-group col-md-3 ">
+							<span class="input-group-addon">実施者</span>
+							<select class="form-control" id="inputSelect" disabled>
+								<option checked>鈴木 徹</option>
+								<option>古屋 景子</option>
+								<option>長沼 佑</option>
+							</select>
+						</div>
+						<div class="input-group col-md-3">
+							<span class="input-group-addon">実施日</span>
+							<input type="text" name="checkDate" class="form-control datepicker" value="2016/07/01" disabled>
+						</div>
+					</div>
+				</div>
 				<!-- group1 -->
 				<div class="panel panel-primary">
 					<div class="panel-heading" id="group1">基本</div>
@@ -346,7 +361,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="./resource/js/bootstrap.min.js"></script>
 	<script src="./resource/js/jquery.smooth-scroll.min.js"></script>
-	<script src="./resource/js/my.js"></script>
+	<script src="./resource/js/jquery.smooth-scroll.customize.js"></script>
 </body>
 
 </html>
