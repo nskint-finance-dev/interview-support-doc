@@ -37,6 +37,26 @@ SqlSeparator=0
 ShowTag=1
 ShowCommonAttributes=0
 
+[Entity]
+PName=users
+LName=ユーザー
+Comment=
+TableOption=
+Page=Main
+Left=100
+Top=250
+Field="ID","ID","INT",,,"","",$FFFFFFFF,"UNSIGNED AUTO_INCREMENT PRIMARY KEY"
+Field="ユーザー名","USERNAME","VARCHAR(50)",,,"","",$FFFFFFFF,""
+Field="パスワード","PASSWORD","VARCHAR(255)",,,"","HASH値",$FFFFFFFF,""
+Field="ロール","ROLE","VARCHAR(20)",,,"","",$FFFFFFFF,""
+Field="作成日時","CREATED","DATETIME",,,"NULL","",$FFFFFFFF,""
+Field="更新日時","MODIFIED","DATETIME",,,"NULL","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20170613231312
+Position="Main",100,250,482,376
+
 [Relation]
 Entity1=M_CHECKITEM
 Entity2=M_ITEM_CATEGORY
