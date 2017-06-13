@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>面談アプリ</title>
+	<link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./resource/css/interview-app-common.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- Header -->
+	<nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+
+			<!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- タイトルなどのテキスト -->
+				<a class="navbar-brand" >面談アプリ</a>
+
+			</div>
+
+			<!-- グローバルナビの中身 -->
+			<div class="collapse navbar-collapse" id="nav-menu">
+
+				<!-- 各ナビゲーションメニュー -->
+				<ul class="nav navbar-nav">
+
+					<!-- 通常のリンク -->
+					<li class="active"><a href="01_list_show_messages.html">ビジネス基礎チェック表</a></li>
+				</ul>
+
+				<!-- ログイン機能は未実装 -->
+				<!--<p class="navbar-text navbar-right">ようこそ <a href="#" class="navbar-link">長沼 佑</a> さん</p>-->
+			</div>
+		</div>
+	</nav>
+
+	<!-- Body -->
+	<div id="body" class="container-fluid">
+
+		<!-- ページタイトル -->
+		<div class="page-header">
+			<h2>ビジネス基礎チェック表 一覧</h2>
+		</div>
+
+		<!-- メッセージ -->
+		<div class="alert alert-success" role="alert">
+			<strong>Success</strong>
+			チェック表ID:0000000006 の登録が完了しました。
+		</div>
+		<div class="alert alert-success" role="alert">
+			<strong>Success</strong>
+			チェック表ID:0000000001 の編集が完了しました。
+		</div>
+		<div class="alert alert-success" role="alert">
+			<strong>Success</strong>
+			チェック表ID:0000000001 の削除が完了しました。
+		</div>
+		<div class="alert alert-info" role="alert">
+			<strong>Info</strong>
+			Infoです。
+		</div>
+		<div class="alert alert-warning" role="alert">
+			<strong>Warning</strong>
+			チェック表ID:0000000006 の登録に失敗しました。
+		</div>
+		<div class="alert alert-warning" role="alert">
+			<strong>Warning</strong>
+			チェック表ID:0000000001 の編集に失敗しました。
+		</div>
+		<div class="alert alert-danger" role="alert">
+			<strong>Danger</strong>
+			システムエラーが発生しました。
+		</div>
+
+		<!-- 見出し-新規登録 -->
+		<div class="page-caption">
+			新規登録
+		</div>
+		<!-- ボタン -->
+		<div class="row-fluid form-group">
+			<form id="">
+				<button type="submit" class="btn btn-primary btn-lg" formaction="./04_add_show_messages.html" >チェックを始める</button>
+			</form>
+		</div>
+		
+		<div class="row-fluid">
+			<!-- 見出し-検索条件 -->
+			<div class="page-caption">
+				検索条件
+			</div>
+			<!-- 検索条件 -->
+			<form class="form-inline" action="#">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">実施者</span>
+						<select class="form-control" id="InputSelect">
+							<option>鈴木 徹</option>
+							<option>古屋 景子</option>
+							<option>長沼 佑</option>
+						</select>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">検索</button>
+			</form>
+		</div>
+		
+
+		<!-- 一覧 -->
+		<div class="page-caption">
+			一覧
+		</div>
+
+		<!-- ページャ -->
+		<div class="row-fluid pull-right">
+			<ul class="pagination">
+				<li class="active disable"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+			</ul>
+		</div>
+
+		<div class="row-fluid">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>チェック表ID</th>
+						<th>実施日▼</th>
+						<th>実施者</th>
+						<th>チェック結果 <img src="./resource/image/circle.jpg"> / <img src="./resource/image/triangle.jpg"> / <img src="./resource/image/x-mark.jpg"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="02_detail_show_messages.html">0000000001</a></td>
+						<td>2016/7/15</td>
+						<td>鈴木 徹</td>
+						<td>15/	 7/	 8</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail_show_messages.html">0000000002</a></td>
+						<td>2016/7/14</td>
+						<td>古屋 景子</td>
+						<td>14/	 8/	 8</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail_show_messages.html">0000000003</a></td>
+						<td>2016/7/13</td>
+						<td>長沼 佑</td>
+						<td>12/	 9/	 9</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail_show_messages.html">0000000004</a></td>
+						<td>2016/7/12</td>
+						<td>長沼 佑</td>
+						<td>11/	 9/	10</td>
+					</tr>
+					<tr>
+						<td><a href="02_detail_show_messages.html">0000000005</a></td>
+						<td>2016/7/11</td>
+						<td>長沼 佑</td>
+						<td>10/	10/	10</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<div id="footer">
+	</div>
+
+</body>
+</html>
